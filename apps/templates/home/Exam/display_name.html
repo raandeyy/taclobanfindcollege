@@ -1,0 +1,468 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-xl-12 mb-4">
+            <div class="card border-0">
+                <div class="card-body" style="text-align: center;">
+                    <h1 class="card-title"><b>
+                        Course Recommendation
+                    </b>
+                    </n>
+                    </h1>
+                    <h5 class="card-title">
+                        <h2 align="center"> The Course is {{ prediction_text }} </h2>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xl-12 mb-4">
+            <div class="card border-0">
+                {% if prediction_text == "Bachelor in Elementary Education Major in Special Education (BEED)" %}
+                    <a href="/ph_beedsped.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Secondary Education Major in Values Education (BSED)" %}
+                    <a href="/ph_bsedve.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Sports Science" %}
+                    <a href="/ph_bsss.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Speech-Language Pathology" %}
+                    <a href="/ph_bsslp.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Office Administration (BSOA)" %}
+                    <a href="/ph_bsoa.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Secondary Education Major in Technology and Livelihood Education (BSED)" %}
+                    <a href="/ph_bsedtle.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Social Work (BS Social Work)" %}
+                    <a href="/ph_bssw.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Elementary Education (BEED)" %}
+                    <a href="/ph_beed.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Secondary Education (BSED)" %}
+                    <a href="/ph_bsed.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Food Technology (BS Food Tech)" %}
+                    <a href="/ph_bsfoodtech.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Arts in Filipino (AB Filipino)" %}
+                    <a href="/ph_abfil.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Physical Education (BPE)" %}
+                    <a href="/ph_bpe.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Public Safety (BSPS)" %}
+                    <a href="/ph_bspus.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Secondary Education Major in Islamic Studies (BSED)" %}
+                    <a href="/ph_bsedis.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Secondary Education Major in Physical Sciences (BSED)" %}
+                    <a href="/ph_bsedps.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Secondary Education Major in Filipino (BSED)" %}
+                    <a href="/ph_bsedf.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Entrepreneurship (BS Entrep)" %}
+                    <a href="/ph_bsentrep.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Secondary Education Major in Music, Arts, Physical and Health Education (BSED)" %}
+                    <a href="/ph_bsedmapeh.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Elementary Education Major in Preschool Education (BEED)" %}
+                    <a href="/ph_beedpreed.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Community Development(BS Community Development)" %}
+                    <a href="/ph_bscomde.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Library and Information Science in the Philippines (BLIS)" %}
+                    <a href="/ph_blis.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Marine Transportation (BSMT)" %}
+                    <a href="/ph_bsmartra.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Secondary Education Major in English (BSED)" %}
+                    <a href="/ph_bsede.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Hotel and Restaurant Management (BS HRM)" %}
+                    <a href="/ph_bshrm.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Business Administration Major in Operations Management (BSBA major in OM)" %}
+                    <a href="/ph_bsbaom.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Business Administration Major in Marketing Management (BSBA major in MM)" %}
+                    <a href="/ph_bsbamm.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Business Administration Major in Human Resource Development (BSBA major in HRDM)" %}
+                    <a href="/ph_bsbahrd.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Business Administration Major in Financial Management (BSBA major in FM)" %}
+                    <a href="/ph_bsbafm.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Business Administration Major in Business Economics (BSBA)" %}
+                    <a href="/ph_bsbabe.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Secondary Education Major in Mathematics (BSED)" %}
+                    <a href="/ph_bsedmath.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Secondary Education Major in Social Studies (BSED)" %}
+                    <a href="/ph_bsedss.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Tourism Management (BSTM)" %}
+                    <a href="/ph_bstm.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Accounting Technology (BSAcT)" %}
+                    <a href="/ph_bsat.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Interior Design (BS Interior Design)" %}
+                    <a href="/ph_bsid.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor in Landscape Architecture (BLA)" %}
+                    <a href="/ph_bla.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Agroforestry (BS Agroforestry)" %}
+                    <a href="/ph_bsagro.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Agribusiness (BS Agribusiness)" %}
+                    <a href="/ph_bsagrib.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Agriculture" %}
+                    <a href="/ph_bsag.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Occupational Therapy (BSOT)" %}
+                    <a href="/ph_bsot.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Midwifery (BS Midwifery)" %}
+                    <a href="/ph_bsmid.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Medical Technology (BS Med Tech)" %}
+                    <a href="/ph_bsmt.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Business Administration" %}
+                    <a href="/ph_bsba.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Real Estate Management (BS REM)" %}
+                    <a href="/ph_bsrem.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>  
+                {% elif prediction_text == "Bachelor of Science in Respiratory Therapy (BSRT)" %}
+                    <a href="/ph_bsrethe.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a> 
+                {% elif prediction_text == "Bachelor of Science in Radiologic Technology (BS Rad Tech)" %}
+                    <a href="/ph_bsrt.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Physical Therapy (BSPT)" %}
+                    <a href="/ph_bspt.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Arts in Literature (AB Literature)" %}
+                    <a href="/ph_ablit.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Information Systems (BSIS)" %}
+                    <a href="/ph_bsis.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Mathematics (BS Mathematics)" %}
+                    <a href="/ph_bsmath.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Foreign Service (BS Foreign Service)" %}
+                    <a href="/ph_bsfs.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Customs Administration (BSCA)" %}
+                    <a href="/ph_bsca.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Nutrition and Dietetics (BS Nutrition and Dietetics)" %}
+                    <a href="/ph_bsnd.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Geology (BS Geology)" %}
+                    <a href="/ph_bsg.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Arts in Sociology (AB Sociology)" %}
+                    <a href="/ph_absocio.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Biology (BS Biology)" %}
+                    <a href="/ph_bsbio.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>  
+                {% elif prediction_text == "Bachelor of Arts in Anthropology (AB Anthropology)" %}
+                    <a href="/ph_abanthro.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a> 
+                {% elif prediction_text == "Bachelor of Fine Arts Major in Visual Communication (BFA)" %}
+                    <a href="/ph_bfav.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Fine Arts Major in Sculpture (BFA)" %}
+                    <a href="/ph_bfas.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Fine Arts Major in Painting (BFA)" %}
+                    <a href="/ph_bfap.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Fine Arts Major in Industrial Design (BFA)" %}
+                    <a href="/ph_bfa.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Arts in History (AB History)" %}
+                    <a href="/ph_ab_history.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Information Technology" %}
+                    <a href="/ph_bsit.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Arts in Psychology (AB Psychology)" %}
+                    <a href="/ph_abpsy.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "BS in Business Administration major in Financial Management" %}
+                    <a href="/ph_bsbafm.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Economics (BS Economics)" %}
+                    <a href="/ph_bseco.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Nursing (BSN)" %}
+                    <a href="/ph_bsn.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Arts in Mass Communication" %}
+                    <a href="/ph_abmasscomm.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>  
+                {% elif prediction_text == "Bachelor of Arts in Journalism (AB Journalism)" %}
+                    <a href="/ph_abjour.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a> 
+                {% elif prediction_text == "Bachelor of Science in Statistics (BS Stat)" %}
+                    <a href="/ph_bsstat.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Criminology (BS Criminology)" %}
+                    <a href="/ph_bscrim.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Arts in Political Science (AB Political Science)" %}
+                    <a href="/ph_abps.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Pharmacy (BS Pharmacy)" %}
+                    <a href="/ph_bsphar.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Applied Mathematics (BS Applied Math)" %}
+                    <a href="/ph_bsamath.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Arts in Philosophy (AB Philosophy)" %}
+                    <a href="/ph_ab_philosophy.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Physics (BS Physics)" %}
+                    <a href="/ph_bsphy.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Marine Engineering in (BSMarE)" %}
+                    <a href="/ph_bsmare.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Industrial Engineering (BSIE)" %}
+                    <a href="/ph_bsie.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Materials Engineering (BSMatE)" %}
+                    <a href="/ph_bsmate.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Sanitary Engineering (BSSE)" %}
+                    <a href="ph_bsse/.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>  
+                {% elif prediction_text == "Master of Science in Bioethics" %}
+                    <a href="/ph_bsbio.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a> 
+                {% elif prediction_text == "Master of Science in Clinical Medicine" %}
+                    <a href="/ph_bsmt.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Master of Science in Clinical Epidemiology" %}
+                    <a href="/ph_bsmt.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science Basic Medical Sciences" %}
+                    <a href="/ph_bsmt.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Mining Engineering (BSEM)" %}
+                    <a href="/ph_bsmie.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Metallurgical Engineering (BSMetE)" %}
+                    <a href="/ph_bsmete.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Applied Physics (BS Applied Physics)" %}
+                    <a href="/ph_apphy.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Architecture (BS Architecture)" %}
+                    <a href="/ph_bsarch.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Petroleum Engineering (BSPetE)" %}
+                    <a href="/ph_bspe.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Mechanical Engineering (BSME)" %}
+                    <a href="/ph_bsme.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Geological Engineering (BSGeoE)" %}
+                    <a href="/ph_bsgeoe.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Geodetic Engineering (BSGE)" %}
+                    <a href="/ph_bsge.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>  
+                {% elif prediction_text == "Bachelor of Science in Electronics and Communications Engineering (BSECE)" %}
+                    <a href="/ph_bsece.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a> 
+                {% elif prediction_text == "Doctor of Medicine." %}
+                    <a href="/ph_bsmt.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Computer Science" %}
+                    <a href="/ph_bscomsci.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Computer Engineering (BSCpE)" %}
+                    <a href="/ph_bscome.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Civil Engineering (BSCE)" %}
+                    <a href="/ph_bsce.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Accountancy (BSA)" %}
+                    <a href="/ph_bsa.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Electrical Engineering (BSEE)" %}
+                    <a href="/ph_bsee.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Master of Science in Biochemistry" %}
+                    <a href="/ph_bschem.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Molecular Biology (BS Molecular Biology)" %}
+                    <a href="/ph_molbio.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Chemical Engineering (BSChE)" %}
+                    <a href="/ph_bsche.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                {% elif prediction_text == "Bachelor of Science in Management Engineering (BS ME)" %}
+                    <a href="/ph_bsrem.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>  
+                {% elif prediction_text == "Bachelor of Science in Chemistry (BS Chemistry)" %}
+                    <a href="/ph_bschem.html" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Description and School Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a> 
+                {% endif %}
+            </div>
+        </div>  
+    <div class="row">
+        <div class="col-12 col-xl-8">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="card border-0 shadow">
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="col-12 px-0 mb-4">
+                <div class="card border-0 shadow">
+                        
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

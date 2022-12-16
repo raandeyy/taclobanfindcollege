@@ -1,0 +1,33 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Homepage {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="{{ config.ASSETS_ROOT }}/css/index_style.css" />
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="container-fluid banner">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-md">
+                    <div class="navbar-brand"><img src="static/assets/img/school logo/logo.png" width="70px" height="70px">Find College</div>
+                </nav>
+            </div>
+            <div class="col-md-8 offset-md-2 info">
+                <h1 class="text-center">Know your course now!</h1>
+                <p class="text-center">
+                    Find College is a system that would help students create the most accurate decision-making on choosing the best college course in line with their future careers.
+                </p>
+                <br><br><br>
+                <a href="{{url_for('home_blueprint.predict')}}" class="btn btn-md text-center">GET STARTED</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

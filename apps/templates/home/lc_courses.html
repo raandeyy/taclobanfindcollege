@@ -1,0 +1,84 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} HIC {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<section style="background-color: #eee;">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 mb-4">
+            <div class="card text-black">
+                <a href="/schools.html"><button type="button" class="btn-close" aria-label="Close"></button></a>
+                <div class="icon-shape-logo icon-shape-primary  mx-auto mt-4">
+                    <img src="static/assets/img/school logo/LC.png" >
+                </div>
+            <div class="card-body">
+              <div class="text-center">
+                <h1 class="card-title font-weight-bold">Leyte Colleges</h1>
+                <p class="text-muted mb-4">Address: Brgy. 46 Paterno Street, Tacloban City, Philippines</p>
+                <br>
+              </div>
+              <div class="card card-body border-0 shadow table-wrapper table-responsive">
+                <table class="table table-hover tab">                  
+                    <thead>
+                        <h2 class="font-weight-bold">Courses Offered</h2>
+                    </thead>
+                    <tbody>
+                        <!-- Item -->
+                        <tr class='clickable-row' data-href='lc_bsba.html'> 
+                            <td>
+                                <a href="#" class="fw-bold">
+                                    BS in Business Administration
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lc_bsc.html'> 
+                            <td>
+                                <a href="#" class="fw-bold">
+                                    BS in Criminology
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lc_beed.html'> 
+                            <td>
+                                <a href="#" class="fw-bold">
+                                    Bachelor of Elementary Education
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lc_bsed.html'> 
+                            <td>
+                                <a href="#" class="fw-bold">
+                                    Bachelor of Secondary Education
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lc_baps.html'> 
+                            <td>
+                                <a href="#" class="fw-bold">
+                                    BA in Political Science
+                                </a>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <h3 style="margin-top: 20px;">Location:</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.299221862213!2d125.0000696143399!3d11.239384853551893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33087135054ed105%3A0x3812538263f51c55!2sPaterno%20Street.%20Tacloban%2C%20City!5e0!3m2!1sen!2sph!4v1669296876728!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+{% endblock javascripts %}

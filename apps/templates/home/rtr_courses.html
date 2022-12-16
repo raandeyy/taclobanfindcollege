@@ -1,0 +1,69 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} EVSU {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<section style="background-color: #eee;">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 mb-4">
+            <div class="card text-black">
+                <div class="icon-shape-logo icon-shape-primary  mx-auto mt-4">
+                    <img src="static/assets/img/school logo/RTR.png" >
+                </div>
+            <div class="card-body">
+              <div class="text-center">
+                <h1 class="card-title font-weight-bold">Remedios Trinidad Romualdez Medical Foundation</h1>
+                <p class="text-muted mb-4">Address: Calanipawan Rd, Tacloban City, Leyte</p>
+                <br>
+              </div>
+              <div class="card card-body border-0 shadow table-wrapper table-responsive">
+                <table class="table table-hover tab">                  
+                    <thead>
+                        <h2 class="font-weight-bold">Courses Offered</h2>
+                    </thead>
+                    <tbody>
+                        <!-- Item -->
+                        <tr class='clickable-row' data-href='rtr_histo.html'> 
+                            <td>
+                                <a href="rtr_histo.html" class="fw-bold">
+                                    Histology
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='rtr_bsmt.html'> 
+                            <td>
+                                <a href="rtr_bsmt.html" class="fw-bold">
+                                    BS Medical Technology
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='rtr_bsn.html'> 
+                            <td>
+                                <a href="rtr_bsn.html" class="fw-bold">
+                                    Bs Nursing
+                                </a>
+                            </td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+            <h3 style="margin-top: 20px;">Location:</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.667583286249!2d124.99739746433958!3d11.212212254065463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3308771c90084afd%3A0xc6f0e867d037ebd1!2sR%20T%20R%20Medical%20Foundation%20College!5e0!3m2!1sen!2sph!4v1669297686927!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+{% endblock javascripts %}

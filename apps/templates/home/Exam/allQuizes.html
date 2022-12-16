@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Quizzes</title>
+		<!-- <link href="../static/css/allQuiz.css" rel="stylesheet"> -->
+		 <link type="text/css" href="{{ config.ASSETS_ROOT }}/css/allQuiz.css" rel="stylesheet">
+		 <link rel="icon" href="{{ url_for('static', filename='images/tiango.png') }}" type="image" sizes="20x20">
+	</head>
+<style>
+h3{
+	color: blue;
+}
+</style>
+	<body>
+
+	<div id="container">
+		<div class="welcome">
+			<h1 align="center"> Welcome {{ name }} {{mail}} </h1>
+			<input class="logout" type="submit" value="Logout" />
+			</form>
+		</div>
+		<hr>
+		<div>
+			<table id="table2">
+				<tr>
+					<td>
+						<div class="quiz-card">
+							<a href="{{ url_for('home_blueprint.check', type='Language_Profeciency') }}">
+							<img src="../static/images/c++.png" alt="Language Profeciency" name="Language Profeciency" title="Language Profeciency Exam">
+							</a>
+						</div>
+					</td>
+					<td>
+						<div class="quiz-card">
+							<a href="{{ url_for('home_blueprint.check', type='Mathematics') }}">
+							<img src="../static/images/java.png" alt="Mathematics" name="math" title="Mathematics Exam">
+							</a>
+						</div>
+					</td>
+					<td>
+						<div class="quiz-card">
+							<a href="{{ url_for('home_blueprint.check', type='Reading_Comprehension') }}">
+							<img src="../static/images/java.png" alt="Reading Comprehension" name="readcompre" title="Reading Comprehension Exam">
+							</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="quiz-card">
+							<a href="{{ url_for('home_blueprint.check', type='General_Information') }}">
+							<img src="../static/imagss/java.png" alt="General Information" name="geninfo" title="General Information Exam">
+							</a>
+						</div>
+					</td>
+					<td>
+						<div class="quiz-card">
+							<a href="{{ url_for('home_blueprint.check', type='Logical_Reasoning') }}">
+							<img src="../static/images/java.png" alt="Logical Reasoning" name="logicreason" title="Logical Reasoning Exam">
+							</a>
+						</div>
+					</td>
+					<td>
+						<div class="quiz-card">
+							<a href="{{ url_for('home_blueprint.check', type='Verbal_Analogy') }}">
+							<img src="../static/images/java.png" alt="Verbal Analogy" name="verbalanalogy" title="Verbal Analogy Exam">
+							</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="quiz-card">
+							<a href="{{ url_for('home_blueprint.check', type='Numerical_Ability') }}">
+							<img src="../static/images/java.png" alt="Numerical Ability" name="verbalanalogy" title="Numerical Ability Exam">
+							</a>
+						</div>
+					</td>
+				</tr>
+			</table>
+			</div>
+	</div>
+	<a href="/">Go back to home page</a>  
+	</body>
+</html>

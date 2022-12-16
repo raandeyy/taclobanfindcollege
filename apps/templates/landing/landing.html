@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Find College Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ config.ASSETS_ROOT }}/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ config.ASSETS_ROOT }}/img/school logo/cap_ph_logo.png">
+
+    <link href="{{ config.ASSETS_ROOT }}/pages/landing/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,700,600" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="{{ config.ASSETS_ROOT }}/pages/landing/css/animate.css">
+    <link rel="stylesheet" href="{{ config.ASSETS_ROOT }}/pages/landing/css/owl.carousel.css">
+    <link rel="stylesheet" href="{{ config.ASSETS_ROOT }}/pages/landing/css/owl.theme.css">
+    <link rel="stylesheet" href="{{ config.ASSETS_ROOT }}/pages/landing/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ config.ASSETS_ROOT }}/pages/landing/css/animsition.min.css">
+
+    <link rel="stylesheet" href="{{ config.ASSETS_ROOT }}/pages/landing/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="{{ config.ASSETS_ROOT }}/pages/landing/css/style.css" media="all">
+</head>
+
+<body>
+    
+    <div class="wrapper animsition" data-animsition-in-class="fade-in" data-animsition-in-duration="1000" data-animsition-out-class="fade-out" data-animsition-out-duration="1000">
+        <div class="container">
+             <nav class="navbar navbar-expand-lg navbar-light navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <a class="navbar-brand page-scroll" href="#main"><img src="{{ url_for('static', filename='assets/pages/landing/logos/find_logo.png')}}" class="img-fluid" width="200" height="200" alt="Find College Logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            {% if current_user.is_authenticated %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('home_blueprint.dashboard')}}">Dashboard</a>
+                                </li>
+                                {% if current_user.username == "testes" %}
+                                    <li class="nav-item">
+                                        <a class="nav-link page-scroll" href="{{ url_for('home_blueprint.admin')}}">Admin</a>
+                                    </li>
+                                {% endif %}
+                            {% else %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('home_blueprint.dashboard')}}">Home</a>
+                                </li>
+                            
+                            {% endif %}
+                        </ul>
+                        <ul class="navbar-nav my-2 my-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link page-scroll" href="#services">Feautures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link page-scroll" href="#courses">PH College Program</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link page-scroll" href="#schools">Tacloban SUC's/LUC's</a>
+                            </li>
+                        </ul>
+                         <ul class="nav-right ml-3 l-3">
+                            {% if current_user.is_authenticated %}
+                                <a href="{{ url_for('authentication_blueprint.logout') }}" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                                    LOGOUT<span><i class="feather icon-chevron-down"></i></span>
+                                </a>
+                            {% else %}
+                                <a href="{{url_for('authentication_blueprint.login')}}" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                                    LOGIN<span><i class="feather icon-chevron-down"></i></span>
+                                </a>
+                            {% endif %}
+                         </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="main" id="main">
+            <div class="hero-section app-hero">
+                <div class="container">
+                    <div class="hero-content app-hero-content text-center">
+                        <div class="row justify-content-md-center">
+                            <div class="col-md-10">
+                                <h1 class="wow fadeInUp" data-wow-delay="0s">Find College Web Application</h1>
+                                <p class="wow fadeInUp" data-wow-delay="0.2s">
+                                    Get Recommendation to Find your University/College
+                                </p>
+                                {% if current_user.is_authenticated %}
+                                    <a class="btn btn-info btn-action mr-2" data-wow-delay="0.2s" href="{{ url_for('home_blueprint.dashboard')}}">Dashboard</a>
+                                {% else %}
+                                    <a class="btn btn-info btn-action mr-2" data-wow-delay="0.2s" href="{{ url_for('authentication_blueprint.login')}}">Dashboard</a>
+                                {% endif %}
+                                
+                            </div>
+                            <div class="col-md-12">
+                                <div class="hero-image">
+                                    <img class="img-fluid" src="{{ url_for('static', filename='assets/pages/landing/images/findschool.avif')}}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="services-section text-center" id="services">
+                <!-- Services section (small) with icons -->
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-8">
+                            <div class="services-content">
+                                <h1 class="wow fadeInUp" data-wow-delay="0s">Our features</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <div class="services">
+                                <div class="row">
+                                    <div class="col-sm-4 wow fadeInUp" data-wow-delay="0.2s">
+                                        <div class="services-icon">
+                                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/icon1.png')}}" height="60" width="60" alt="Service">
+                                        </div>
+                                        <div class="services-description">
+                                            <h1>Recommendations</h1>
+                                            <p>
+                                                We use would like to help student by providing them with school and program recommendations.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="services-icon">
+                                            <img class="icon-2" src="{{ url_for('static', filename='assets/pages/landing/logos/icon2.png')}}" height="60" width="60" alt="Service">
+                                        </div>
+                                        <div class="services-description">
+                                            <h1>Browse on Courses and Schools</h1>
+                                            <p>
+                                                Our site contains the most comprehensive collection of information of the different courses and schools in Tacloban City.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 wow fadeInUp" data-wow-delay="0.4s">
+                                        <div class="services-icon">
+                                            <img class="icon-3" src="{{ url_for('static', filename='assets/pages/landing/logos/icon3.png')}}" height="60" width="60" alt="Service">
+                                        </div>
+                                        <div class="services-description">
+                                            <h1>Entrance Exam Reviewer</h1>
+                                            <p>
+                                                We created example exams for our users, as a start-up practice exam in taking actual exams in their choosen universities.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-features" id="courses">
+                <div class="container">
+                    <div class="flex-split">
+                        <div class="f-left wow fadeInUp" data-wow-delay="0s">
+                            <div class="left-content">
+                                <img class="img-fluid" src="{{ url_for('static', filename='assets/pages/landing/images/feature_1.png')}}" alt="">
+                            </div>
+                        </div>
+                        <div class="f-right wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="right-content">
+                                <h2>List of Courses in the Philippines</h2>
+                                <p>Tuition Fees and requirements are provided.</p>
+                                <ul>
+                                    <li><i class="ion-android-checkbox-outline"></i>Data avaliable from 13 Colleges in Tacloban</li>
+                                    <li><i class="ion-android-checkbox-outline"></i>Detailed Requirements</li>
+                                    <li><i class="ion-android-checkbox-outline"></i>Updated Data </li>
+                                </ul>
+                                <a class="btn btn-primary btn-action btn-fill" href="{{ url_for('home_blueprint.dashboard')}}">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <div class="counter-section">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-sm-12">
+                            <div class="languages-content">
+                                <h1 class="wow fadeInUp" data-wow-delay="0s">Programming Languages Used</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6 col-md-3">
+                            <div class="counter-up">
+                                <div class="counter-icon">
+                                    <i class="ion-social-nodejs"></i>
+                                </div>
+                                <h3>ES<span class="counter">6</span>+</h3>
+                                <div class="counter-text">
+                                    <h4>JavaScript Language</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="counter-up">
+                                <div class="counter-icon">
+                                    <i class="ion-social-python"></i>
+                                </div>
+                                <h3><span class="counter">3.6</span>+</h3>
+                                <div class="counter-text">
+                                    <h4>Python Language</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="counter-up">
+                                <div class="counter-icon">
+                                    <i class="ion-social-html5-outline"></i>
+                                </div>
+                                <h3><span class="counter">5</span>+</h3>
+                                <div class="counter-text">
+                                    <h4>HTML version</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="counter-up">
+                                <div class="counter-icon">
+                                    <i class="ion-social-sass"></i>
+                                </div>
+                                <h3><span class="counter">3</span>+</h3>
+                                <div class="counter-text">
+                                    <h4>CSS version</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feature_huge text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="wow fadeInUp" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: fadeInUp;">Dashboard panel avaliable</h1>
+                            <img class="img-fluid wow fadeInUp" data-wow-delay="0.1s" src="{{ url_for('static', filename='assets/pages/landing/images/big_feature.png')}}" alt="" style="max-width:100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing-section no-color text-center" id="schools">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 ">
+                            <div class="pricing-intro">
+                                <h1 class="wow fadeInUp" data-wow-delay="0s">SCHOOLS AND COLLEGES IN TACLOBAN</h1>
+                                <p class="wow fadeInUp" data-wow-delay="0.2s">
+                                     Browse through the different courses offered within different Universities and Colleges in Tacloban
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="client-section">
+                <div class="container text-center">
+                    <div class="clients owl-carousel">
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/EVSU.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/ABE.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/ACLC.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/AMA.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/ASIAN.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/HIC.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/HV.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/JM.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/LC.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/LNU.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/UP.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/SS.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="single">
+                            <img src="{{ url_for('static', filename='assets/pages/landing/logos/RTR.png')}}" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-sub text-center no-color">
+                <div class="container">
+                   
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <div class="col-md-12 text-center">
+                        <div class="footer-text">
+                            <p>
+                                Copyright © 2022 Find College App All Rights Reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a id="back-top" class="back-to-top page-scroll" href="#main">
+                <i class="ion-ios-arrow-thin-up"></i>
+            </a>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/pages/landing/js/jquery-2.1.1.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/pages/landing/js/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/pages/landing/js/plugins.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/pages/landing/js/menu.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/pages/landing/js/custom.js')}}"></script>
+</body>
+</html>

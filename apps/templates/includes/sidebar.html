@@ -1,0 +1,127 @@
+        <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
+            <a class="navbar-brand me-lg-5" href="/">
+                <img class="navbar-brand-dark" src="{{ config.ASSETS_ROOT }}/img/logo.png" alt="logo" /> <img class="navbar-brand-light" src="{{ config.ASSETS_ROOT }}/img/brand/dark.svg" alt="logo" />
+            </a>
+            <div class="d-flex align-items-center">
+                <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
+          <div class="sidebar-inner px-4 pt-3">
+            <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
+              <div class="d-flex align-items-center">
+                <div class="avatar-lg me-4">
+                  <img src="{{ config.ASSETS_ROOT }}/img/team/user_profile.png" class="card-img-top rounded-circle border-white"
+                    alt="User Picture">
+                </div>
+                <div class="d-block">
+                  <span><h2 class="h5 mb-3">Hi, <strong>{{ current_user.username }}</strong></h2></span>
+                  <a href="/page-sign-in.html" class="btn btn-secondary btn-sm d-inline-flex align-items-center">
+                    <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>            
+                    Sign Out
+                  </a>
+                </div>
+              </div>
+              <div class="collapse-close d-md-none">
+                <a href="#sidebarMenu" data-bs-toggle="collapse"
+                    data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                    aria-label="Toggle navigation">
+                    <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </a>
+              </div>
+            </div>
+            <ul class="nav flex-column pt-3 pt-md-0">
+              <li class="nav-item">
+                <a href="/" class="nav-link d-flex align-items-center">
+                  <span class="sidebar-icon">
+                    <img src="{{ config.ASSETS_ROOT }}/img/logo.png" height="50" width="50" alt="Logo">
+                  </span>
+                  <span class="mt-1 ms-1 sidebar-text">Find College</span>
+                </a>
+              </li>
+              <li class="nav-item {% if 'home_page' in segment %} active {% endif %}">
+                <a href="/" class="nav-link">
+                  <span class="sidebar-icon">
+                    <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                  </span> 
+                  <span class="sidebar-text">Home</span>
+                </a>
+              </li>
+              <li class="nav-item {% if 'transactions' in segment %} active {% endif %}">
+                <a href="{{url_for('home_blueprint.predict')}}" class="nav-link">
+                  <span class="sidebar-icon">
+                    <svg class="icon icon-xs me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5,11.5c0,2-2.5,3.5-2.5,5h-2c0-1.5-2.5-3-2.5-5C8.5,9.57,10.07,8,12,8S15.5,9.57,15.5,11.5z M13,17.5h-2V19h2V17.5z M22,12c0-2.76-1.12-5.26-2.93-7.07l-1.06,1.06C19.55,7.53,20.5,9.66,20.5,12c0,2.34-0.95,4.47-2.49,6.01l1.06,1.06 C20.88,17.26,22,14.76,22,12z M3.5,12c0-2.34,0.95-4.47,2.49-6.01L4.93,4.93C3.12,6.74,2,9.24,2,12c0,2.76,1.12,5.26,2.93,7.07 l1.06-1.06C4.45,16.47,3.5,14.34,3.5,12z M17.5,12c0,1.52-0.62,2.89-1.61,3.89l1.06,1.06C18.22,15.68,19,13.93,19,12 c0-1.93-0.78-3.68-2.05-4.95l-1.06,1.06C16.88,9.11,17.5,10.48,17.5,12z M7.05,16.95l1.06-1.06c-1-1-1.61-2.37-1.61-3.89 c0-1.52,0.62-2.89,1.61-3.89L7.05,7.05C5.78,8.32,5,10.07,5,12C5,13.93,5.78,15.68,7.05,16.95z" fill="currentColor"></path></svg>
+                  </span>
+                  <span class="sidebar-text">Find College</span>
+                </a>
+              </li>
+              <li class="nav-item {% if 'ph_courses' in segment %} active {% endif %}">
+                <a href="/ph_courses.html" class="nav-link">
+                  <span class="sidebar-icon">
+                    <svg class="icon icon-xs me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <polygon fill="var(--ci-primary-color, currentColor)" points="368 350.643 256 413.643 144 350.643 144 284.081 112 266.303 112 369.357 256 450.357 400 369.357 400 266.303 368 284.081 368 350.643" class="ci-primary"></polygon> <path fill="currentColor" d="M256,45.977,32,162.125v27.734L256,314.3,448,207.637V296h32V162.125ZM416,188.808l-32,17.777L256,277.7,128,206.585,96,188.808,73.821,176.486,256,82.023l182.179,94.463Z" class="ci-primary"></path> </svg>
+                  </span>
+                  <span class="sidebar-text">Philippines Courses</span>
+                </a>
+              </li>
+              <li class="nav-item {% if 'schools' in segment %} active {% endif %}">
+                <a href="schools.html" class="nav-link">
+                  <span class="sidebar-icon">
+                    <svg class="icon icon-xs me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24"><path fill="currentColor" d="M21,10a.99974.99974,0,0,0,1-1V6a.9989.9989,0,0,0-.68359-.94824l-9-3a1.002,1.002,0,0,0-.63282,0l-9,3A.9989.9989,0,0,0,2,6V9a.99974.99974,0,0,0,1,1H4v7.18427A2.99507,2.99507,0,0,0,2,20v2a.99974.99974,0,0,0,1,1H21a.99974.99974,0,0,0,1-1V20a2.99507,2.99507,0,0,0-2-2.81573V10ZM20,21H4V20a1.001,1.001,0,0,1,1-1H19a1.001,1.001,0,0,1,1,1ZM6,17V10H8v7Zm4,0V10h4v7Zm6,0V10h2v7ZM4,8V6.7207l8-2.667,8,2.667V8Z"/></svg>
+                  </span>
+                  <span class="sidebar-text">Tacloban SUCs/LUCs</span>
+                </a>
+              </li>
+
+              <li class="nav-item {% if 'AllExam' in segment %} active {% endif %}">
+                <a href="AllExam.html" class="nav-link">
+                  <span class="sidebar-icon">
+                    <svg class="icon icon-xs me-2" width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M39 13C37.3431 13 36 14.3431 36 16V18H42V16C42 14.3431 40.6569 13 39 13ZM42 20H36V36.5L39 41L42 36.5V20Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M6 9V38.9992C6 40.6561 7.34315 41.9992 9 41.9992H31C32.6569 41.9992 34 40.6561 34 38.9992V9C34 7.34315 32.6569 6 31 6H9C7.34315 6 6 7.34314 6 9ZM20 15C20 14.4477 20.4477 14 21 14H29C29.5523 14 30 14.4477 30 15C30 15.5523 29.5523 16 29 16H21C20.4477 16 20 15.5523 20 15ZM21 18C20.4477 18 20 18.4477 20 19C20 19.5523 20.4477 20 21 20H29C29.5523 20 30 19.5523 30 19C30 18.4477 29.5523 18 29 18H21ZM20 28C20 27.4477 20.4477 27 21 27H29C29.5523 27 30 27.4477 30 28C30 28.5523 29.5523 29 29 29H21C20.4477 29 20 28.5523 20 28ZM21 31C20.4477 31 20 31.4477 20 32C20 32.5523 20.4477 33 21 33H29C29.5523 33 30 32.5523 30 32C30 31.4477 29.5523 31 29 31H21ZM12 28V31H15V28H12ZM11 26H16C16.5523 26 17 26.4477 17 27V32C17 32.5523 16.5523 33 16 33H11C10.4477 33 10 32.5523 10 32V27C10 26.4477 10.4477 26 11 26ZM17.7071 15.7071C18.0976 15.3166 18.0976 14.6834 17.7071 14.2929C17.3166 13.9024 16.6834 13.9024 16.2929 14.2929L13 17.5858L11.7071 16.2929C11.3166 15.9024 10.6834 15.9024 10.2929 16.2929C9.90237 16.6834 9.90237 17.3166 10.2929 17.7071L13 20.4142L17.7071 15.7071Z" fill="currentColor"/> </svg>
+                  </span>
+                  <span class="sidebar-text">Take Entrance Exam</span>
+                </a>
+              </li>
+
+              <li class="nav-item {% if 'about' in segment %} active {% endif %}">
+                <a href="about.html" class="nav-link">
+                  <span class="sidebar-icon">
+                    <svg class="icon icon-xs me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16"> <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" fill="currentColor"></path> </svg>
+                  </span>
+                  <span class="sidebar-text">About Us</span>
+                </a>
+              </li>           
+              {% if current_user.username == "testes" %}   
+                <li class="nav-item ">
+                  <a href="{{url_for('home_blueprint.display_score')}}" class="nav-link">
+                    <span class="sidebar-icon">
+                      <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+                    </span>
+                    <span class="sidebar-text">Display Exam Scores</span>
+                  </a>
+                </li>
+              {% endif %}
+              <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
+              <li class="nav-item">
+                <a href="{{ url_for('authentication_blueprint.logout') }}" class="nav-link">
+                    <span class="sidebar-icon">
+                        <svg class="icon icon-xs text-danger me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                        </svg> 
+                    </span>
+                    <span class="sidebar-text">Logout</span>
+                </a>
+              </li>
+              {% if current_user.username == "testes" %}            
+                <li class="nav-item">
+                  <a target="_blank" 
+                    href="{{url_for('home_blueprint.view')}}" 
+                    class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro"> 
+                    <span>Help & Feedback</span>
+                  </a>
+                </li>
+              {% endif %}
+            </ul>
+          </div>
+        </nav>

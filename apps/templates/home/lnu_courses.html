@@ -1,0 +1,153 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} EVSU {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<section style="background-color: #eee;">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 mb-4">
+            <div class="card text-black">
+                <a href="/schools.html"><button type="button" class="btn-close" aria-label="Close"></button></a>
+                <div class="icon-shape-logo icon-shape-primary  mx-auto mt-4">
+                    <img src="static/assets/img/school logo/LNU.png" >
+                </div>
+            <div class="card-body">
+              <div class="text-center">
+                <h1 class="card-title font-weight-bold">Leyte Normal University</h1>
+                <p class="text-muted mb-4">Address: Paterno St, Downtown, Tacloban City, 6500 Leyte</p>
+                <br>
+              </div>
+              <div class="card card-body border-0 shadow table-wrapper table-responsive">
+                <table class="table table-hover tab">                  
+                    <thead>
+                        <h2 class="font-weight-bold">Courses Offered</h2>
+                    </thead>
+                    <tbody>
+                        <!-- Item -->
+                        <tr class='clickable-row' data-href='lnu_abps.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    AB in Political Science
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_blis.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Library and Information Science
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_abcom.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    AB in Communication
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_abeng.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    AB in English
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_bsb.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    BS in Biology
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_bsit.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    BS in Information Technology
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_bssw.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    BS in Social Work
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_bee.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Elementary Education
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_bsed.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Secondary Education
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_bshrm.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    BS in Hotel and Restaurant Management
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_bst.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    BS in Tourism
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_msit.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    MS in Information Technology
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_mb.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    Master in Biology
+                                </a>
+                            </td>
+                            <tr class='clickable-row' data-href='lnu_msw.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    Master in Social Work
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='lnu_me.html'> 
+                            <td>
+                                <a class="fw-bold">
+                                    Master in English
+                                </a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <h3 style="margin-top: 20px;">Location:</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1956.661214494325!2d125.00119570620026!3d11.237674867879473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3308772c87c4c367%3A0xa5e5c080ec6a88ef!2sLeyte%20Normal%20University!5e0!3m2!1sen!2sph!4v1669141027402!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+{% endblock javascripts %}

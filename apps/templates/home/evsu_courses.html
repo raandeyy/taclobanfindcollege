@@ -1,0 +1,345 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} EVSU {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<section style="background-color: #eee;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 mb-4">
+            <div class="card text-black">
+                <a href="/schools.html"><button type="button" class="btn-close" aria-label="Close"></button></a>
+                <div class="icon-shape-logo icon-shape-primary  mx-auto mt-4">
+                    <img src="static/assets/img/school logo/EVSU.png" >
+                </div>
+            <div class="card-body">
+              <div class="text-center">
+                <h1 class="card-title font-weight-bold">Eastern Visayas State University</h1>
+                <p class="text-muted mb-4">Address: 6XRW+3W9, Salazar St, Downtown, Tacloban City, Leyte, Philippines</p>
+                <br>
+              </div>
+              <div class="card card-body border-0 shadow table-wrapper table-responsive">
+                <table class="table table-hover tab">                  
+                    <thead>
+                        <h2 class="font-weight-bold">Courses Offered</h2>
+                    </thead>
+                    <tbody>
+                        <!-- Item -->
+                        
+                        <tr class='clickable-row' data-href='evsu_bsarch.html'> 
+                                <td >
+                                    <a class="fw-bold">Bachelor of Science in Architecture (BSAr)</a>
+                               </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsid.html'>
+                             <td>
+                                <a class="fw-bold">Bachelor of Science in Interior Design (BSID) </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsie.html'>
+                            <td>
+                                <a  class="fw-bold">
+                                    Bachelor of Science in Industrial Engineering (BSIE)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsche.html'>
+                            <td>
+                                <a  class="fw-bold">
+                                    Bachelor of Science in Chemical Engineering (BSCHE)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsce.html'>
+                            <td>
+                                <a  class="fw-bold">
+                                    Bachelor of Science in Civil Engineering (BSCE)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsee.html'>
+                            <td>
+                                <a  class="fw-bold">
+                                    Bachelor of Science in Electrical Engineering (BSEE)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsme.html'>
+                            <td>
+                                <a  class="fw-bold">
+                                    Bachelor of Science in Mechanical Engineering (BSME)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsge.html'>
+                            <td>
+                                <a  class="fw-bold">
+                                    Bachelor of Science in Geodetic Engineering (BSGE)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bse.html'>
+                            <td >
+                                <a class="fw-bold">
+                                     Bachelor of Science in Economics
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_sining.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Batsilyer ng Sining sa Filipino
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bael.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Arts in English Language (BAEL)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsmath.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Science in Mathematics (BSMath)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bses.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Science in Environmental Science (BSES)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bschem.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Science in Chemistry (BSChem)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsstat.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Science in Statistics (BSStat)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsenterpreneur.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Science in Entrepreneurship (BSE)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsoa.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Science in Office Administration (BSOA)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsa.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Science in Accountancy (BSA)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsm.html'>
+                            <td>
+                                <a  class="fw-bold">
+                                    Bachelor of Science in Marketing (BSM)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsedmath.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Secondary Education (BSEd) major in: Mathematics
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bsed_sci.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Secondary Education (BSEd) major in: Science
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bcaed.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Culture & Arts Education (BCAEd)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_bped.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Physical Education (BPEd)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_beed.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor in Elementary Education (BEED)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_btvted_fs.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Technical-Vocational Teacher Education (BTVTEd) major in: Food and Service Management (FSM)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_btvted_cc.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Technical-Vocational Teacher Education (BTVTEd) major in: Civil and Construction
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_btvted_at.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Technical-Vocational Teacher Education (BTVTEd) major in: Automotive Technology (AT)
+                                </a>
+                            </td>
+                        </tr>            
+                        <tr class='clickable-row' data-href='evsu_btvted_et.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Technical-Vocational Teacher Education (BTVTEd) major in: Electrical Technology (ET)
+                                </a>
+                            </td>
+                        </tr>      
+                        <tr class='clickable-row' data-href='evsu_btvted_gf.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Technical-Vocational Teacher Education (BTVTEd) major in: Garments, Fashion & Design (GFD)
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href='evsu_btvted_hv.html'>
+                            <td>
+                                <a class="fw-bold">
+                                     Bachelor of Technical-Vocational Teacher Education (BTVTEd) major in: Heating, Ventilating, Air-Conditioning and Refrigeration Technology
+                                </a>
+                            </td>
+                        </tr>       
+                        <tr class='clickable-row' data-href='evsu_btled_ia.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Technology & Livelihood Education (BTLEd) major in: Industrial Arts (IA)
+                                </a>
+                            </td>
+                        </tr> 
+                        <tr class='clickable-row' data-href='evsu_btled_he.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Technology & Livelihood Education (BTLEd) major in: Home Economics (HE)
+                                </a>
+                            </td>
+                        </tr>     
+                        <tr class='clickable-row' data-href='evsu_btled_dt.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Technology & Livelihood Education (BTLEd) major in: Diploma in Teaching Secondary (DTS)
+                                </a>
+                            </td>
+                        </tr>   
+                               
+                        <tr class='clickable-row' data-href='evsu_bsit.html'>
+                            <td>
+                                <a class="fw-bold">
+                                    Bachelor of Science in Information Technology (BSIT)
+                                </a>
+                            </td>
+                        </tr>           
+                        <tr class='clickable-row' data-href='evsu_bshm.html'>
+                            <td>
+                                <a class="fw-bold"> Bachelor of Science in Hospitality Management (BSHM) </a>
+                            </td>
+                        </tr>          
+                        <tr class='clickable-row' data-href='evsu_bsnd.html'>
+                            <td>
+                                <a class="fw-bold"> Bachelor of Science in Nutrition & Dietetics (BSND) </a>
+                            </td>
+                        </tr>         
+                        <tr class='clickable-row' data-href='evsu_bsit_cc.html'>
+                            <td>
+                                <a class="fw-bold"> Bachelor of Science in Industrial Technology with major in: Civil Construction </a>
+                            </td>
+                        </tr>           
+                        <tr class='clickable-row' data-href='evsu_bit_cf.html'>
+                            <td>
+                                <a class="fw-bold"> Bachelor of Science in Industrial Technology with major in: Clothing and Fashion Design </a>
+                            </td>
+                        </tr>         
+                        <tr class='clickable-row' data-href='evsu_bsit_ga.html'>
+                            <td>
+                                <a class="fw-bold"> Bachelor of Science in Industrial Technology with major in: Graphics Arts and Printing</a>
+                            </td>
+                        </tr>                   
+                        <tr class='clickable-row' data-href='evsu_biterac.html'>
+                            <td>
+                                <a class="fw-bold"> Bachelor of Industrial Technology major in Electricity, Refrigeration and Air Conditioning (ERAC)</a>
+                            </td>
+                        </tr>     
+                        <tr class='clickable-row' data-href='evsu_bsit_ca.html'></tr>
+                            <td>
+                                <a class="fw-bold"> Bachelor of Science in Industrial Technology with major in: Culinary Arts</a>
+                            </td>
+                        </tr>           
+                        <tr class='clickable-row' data-href='evsu_bit_electro.html'>
+                            <td>
+                                <a class="fw-bold"> Bachelor of Science in Industrial Technology with major in: Electronics</a>
+                            </td>
+                        </tr>          
+
+                        <tr class='clickable-row' data-href='evsu_bsmt_auto.html'>
+                            <td>
+                                <a class="fw-bold"> Bachelor of Science in Mechanical Technology with major in: Automotive</a>
+                            </td>
+                        </tr>           
+                        <tr class='clickable-row' data-href='evsu_bsmt_meta.html'>
+                            <td>
+                                <a class="fw-bold"> Bachelor of Science in Mechanical Technology with major in: Metallurgy </a>
+                            </td>
+                        </tr>           
+                        <tr class='clickable-row' data-href='evsu_bit_ms.html'>
+                            <td>
+                                <a class="fw-bold"> Bachelor of Science in Mechanical Technology with major in: Machine Shop </a>
+                            </td>
+                        </tr>           
+                        <tr class='clickable-row' data-href='evsu_bsmt_wf.html'>
+                            <td>
+                                <a class="fw-bold"> Bachelor of Science in Mechanical Technology with major in: Welding and Fabrication </a>
+                            </td>
+                        </tr>                                 
+                    </tbody>
+                </table>
+               </div>
+               <h3 style="margin-top: 20px;">Location:</h3>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2326.8510247217487!2d124.99709887358989!3d11.240699992781154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3307d9b941a4988d%3A0xecd6df00cc4b9bd7!2sEastern%20Visayas%20State%20University!5e0!3m2!1sen!2sph!4v1669140888044!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+{% endblock javascripts %}

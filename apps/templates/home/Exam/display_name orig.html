@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Leaderboard</title>
+		<!-- <link href="../static/css/allQuiz.css" rel="stylesheet"> -->
+		 <link type="text/css" href="{{ config.ASSETS_ROOT }}/css/allQuiz.css" rel="stylesheet">
+		 <link rel="icon" href="{{ url_for('static', filename='images/tiango.png') }}" type="image" sizes="20x20">
+
+<style>
+.leaderboard {
+  width: 200px;
+  height: 100px;
+  padding: 30px 20px;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+  margin: 20px 20px 20px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate;
+  border-spacing: 50px 40px;
+}
+
+#table2 {
+  padding: 5px 5px;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+h3 {
+	color: rgba(0,0,0,.7);
+  font-weight: 900;
+  font-size: 1.5em;
+  margin: 50px 0 40px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+	</head>
+
+	<body>
+
+	<div id="container">
+
+			<form action="{{ url_for('home_blueprint.index') }}" >
+			<input class="back" type="submit" value="Back"/>
+			</form>
+
+			<div align="center">
+				<h1 align="center"> Your LR score is {{ LRscore }} </h1>
+				<h1 align="center"> Your RC score is {{ RCscore }} </h1>
+				<h1 align="center"> Your exam score is {{ TheScore }} </h1>
+				<h1 align="center"> Your Average score is {{ Average }} </h1>
+				<h1 align="center"> {{ prediction_text }} </h1>
+
+				<!-- View Answers Button -->
+				<form action="{{ url_for('home_blueprint.answers') }}" method="POST">
+					<input class="answer" type="submit" value="Answers" />
+				</form>
+			</div>
+
+			<hr>
+			
+	</div>
+	</body>
+</html>

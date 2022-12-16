@@ -1,0 +1,31 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Transactions {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+  <div class="table-settings mb-4">
+      <div class="row align-items-center justify-content-between">
+          <div class="col col-md-6 col-lg-3 col-xl-4">
+              <div class="input-group me-2 me-lg-3 fmxw-400">
+                
+                <form action="{{ url_for('home_blueprint.predict')}}" method="POST">                  
+                  <!-- <input name="Percentage" placeholder="Score Percentage" value={{RCscore}} > -->
+                    <button type="submit" value={{Average}} name="Percentage" class="btn btn-primary btn-block btn-large">Predict</button>
+                </form>
+                  
+               
+              </div>
+              <br>
+              <br>
+              {{ prediction_text }}
+          </div>
+      </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

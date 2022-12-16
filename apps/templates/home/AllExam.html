@@ -1,0 +1,211 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-xl-12 mb-4">
+            <div class="card border-0">
+                <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title"><b>
+                        Please Complete All Exam to be able to Proceed to the Recommendations. Recommendations wont appear unless all Exams are answered.
+                    </b>
+                    </h5>
+                    <h5 class="card-title">
+                        Note that all answers will be recorded on the database. The exam can only be taken once. For your concern please contact us the developer. Recommendations Provided are based on exam answer.
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body">
+                    <div class="row d-block d-xl-flex align-items-center">
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="icon-shape icon-shape-primary rounded me-4 me-sm-0">
+                                <a href="{{ url_for('home_blueprint.check', type='Language_Profeciency') }}">
+                                <img src="static/assets/img/Exam_logo/languages-skills.png" alt="Language Profeciency" name="Language Profeciency" title="Language Profeciency Exam">
+                            </div>
+                            <div class="d-sm-none">
+                                <a href="{{ url_for('home_blueprint.check', type='Language_Profeciency') }}" class="card-link"><h2>Language Profeciency </h2></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-7 px-xl-0">
+                            <div class="d-none d-sm-block">
+                                <a href="{{ url_for('home_blueprint.check', type='Language_Profeciency') }}" class="card-link"><h4>Language Profeciency </h4></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body">
+                    <div class="row d-block d-xl-flex align-items-center">
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="icon-shape icon-shape-primary rounded me-4 me-sm-0">
+                                <a href="{{ url_for('home_blueprint.check', type='Mathematics')}}">
+                                <img src="static/assets/img/Exam_logo/mathematics.png" ></a>
+                            </div>
+                            <div class="d-sm-none">
+                                <a href="{{ url_for('home_blueprint.check', type='Mathematics') }}" class="card-link"><h2>Mathematics </h2></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-7 px-xl-0">
+                            <div class="d-none d-sm-block">
+                                <a href="{{ url_for('home_blueprint.check', type='Mathematics') }}" class="card-link"><h4>Mathematics </h4></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body">
+                    <div class="row d-block d-xl-flex align-items-center">
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="icon-shape icon-shape-primary rounded me-4 me-sm-0">
+                                 <a href="{{ url_for('home_blueprint.check', type='Reading_Comprehension')}}"> <img src="static/assets/img/Exam_logo/reading-examination.png" ></a>
+                            </div>
+                            <div class="d-sm-none">
+                                <a href="{{ url_for('home_blueprint.check', type='Reading_Comprehension')}}" class="card-link"><h2>Reading Comprehension</h2></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-7 px-xl-0">
+                            <div class="d-none d-sm-block">
+                                <a href="{{ url_for('home_blueprint.check', type='Reading_Comprehension')}}" class="card-link"><h4>Reading Comprehension</h4></a>                         
+                            </div>              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body">
+                    <div class="row d-block d-xl-flex align-items-center">
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="icon-shape icon-shape-primary rounded me-4 me-sm-0">
+                                <a href="{{ url_for('home_blueprint.check', type='General_Information')}}">
+                                <img src="static/assets/img/Exam_logo/general-knowledge.png" ></a>
+                            </div>
+                            <div class="d-sm-none">
+                                <a href="{{ url_for('home_blueprint.check', type='General_Information') }}" class="card-link"><h2>General Information</h2></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-7 px-xl-0">
+                            <div class="d-none d-sm-block">
+                                <a href="{{ url_for('home_blueprint.check', type='General_Information') }}" class="card-link"><h4>General Information</h4></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body">
+                    <div class="row d-block d-xl-flex align-items-center">
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="icon-shape icon-shape-primary rounded me-4 me-sm-0">
+                                <a href="{{ url_for('home_blueprint.check', type='Logical_Reasoning')}}">
+                                <img src="static/assets/img/Exam_logo/lateral-thinking.png" ></a>
+                            </div>
+                            <div class="d-sm-none">
+                                <a href="{{ url_for('home_blueprint.check', type='Logical_Reasoning') }}" class="card-link"><h2>Logical Reasoning</h2></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-7 px-xl-0">
+                            <div class="d-none d-sm-block">
+                                <a href="{{ url_for('home_blueprint.check', type='Logical_Reasoning') }}" class="card-link"><h4>Logical Reasoning</h4></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body">
+                    <div class="row d-block d-xl-flex align-items-center">
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="icon-shape icon-shape-primary rounded me-4 me-sm-0">
+                                <a href="{{ url_for('home_blueprint.check', type='Verbal_Analogy')}}">
+                                <img src="static/assets/img/Exam_logo/verbal-communication.png" ></a>
+                            </div>
+                            <div class="d-sm-none">
+                                <a href="{{ url_for('home_blueprint.check', type='Verbal_Analogy') }}" class="card-link"><h2>Verbal Analogy</h2></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-7 px-xl-0">
+                            <div class="d-none d-sm-block">
+                                <a href="{{ url_for('home_blueprint.check', type='Verbal_Analogy') }}" class="card-link"><h4>Verbal Analogy</h4></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body">
+                    <div class="row d-block d-xl-flex align-items-center">
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="icon-shape icon-shape-primary rounded me-4 me-sm-0">
+                                <a href="{{ url_for('home_blueprint.check', type='Numerical_Ability')}}">
+                                <img src="static/assets/img/Exam_logo/numerical-cube.png" ></a>
+                            </div>
+                            <div class="d-sm-none">
+                                <a href="{{ url_for('home_blueprint.check', type='Numerical_Ability') }}" class="card-link"><h2>Numerical Ability</h2></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-7 px-xl-0">
+                            <div class="d-none d-sm-block">
+                                <a href="{{ url_for('home_blueprint.check', type='Numerical_Ability') }}" class="card-link"><h4>Numerical Ability</h4></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-12 mb-4">
+            <div class="card border-0">
+                <div class="card-body" style="text-align: center;">
+                    <a href="{{url_for('home_blueprint.predict')}}" class="btn btn-round" type="button" style="background-color: #24a0ed !important; border-color: #fd7a6b !important; color: #fff !important;">
+                        Proceed to Course Recommendations<span><i class="feather icon-chevron-down"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>  
+    <div class="row">
+        <div class="col-12 col-xl-8">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="card border-0 shadow">
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="col-12 px-0 mb-4">
+                <div class="card border-0 shadow">
+                        
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
